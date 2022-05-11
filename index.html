@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+    <title>GraphEditor</title>
+  </head>
+  <body>
+    <!-- Navbar Section-->
+    <nav class="navbar">
+      <a href="#home" id="navbar__logo"
+        ><ion-icon name="cut-outline"></ion-icon>GraphEditor</a
+      >
+    </nav>
+
+    <!-- Input Section-->
+    <div class="input__container">
+      <!-- Add Node-->
+      <div class="add_input_node">
+        <h2>Add Node</h2>
+        <div class="input_box">
+          <span>Node ID</span>
+          <input id="add-node-id" type="text" placeholder="Node id" />
+        </div>
+        <div class="input_box">
+          <span>Key value</span>
+          <input id="add-key-value" type="text" placeholder="Key value" />
+        </div>
+        <button id="add-node-button" class="action-btn">Add</button>
+      </div>
+      <!-- Edit Node -->
+      <div class="edit_input_node">
+        <h2>Edit Node</h2>
+        <div class="input_box">
+          <span>Node ID</span>
+          <input id="edit-node-id" type="text" placeholder="Node id" required />
+        </div>
+        <div class="input_box">
+          <span>Key value</span>
+          <input id="edit-key-value" type="text" placeholder="Key value" />
+        </div>
+        <button id="edit-node-button" class="action-btn">Edit</button>
+      </div>
+      <!-- Delete Node-->
+      <div class="delete_input_node">
+        <h2>Delete Node</h2>
+        <div class="input_box">
+          <span>Node ID</span>
+          <input id="delete-node-id" type="text" placeholder="Node id" />
+        </div>
+        <button id="delete-node-button" class="action-btn">Delete</button>
+      </div>
+      <!-- Add Edge -->
+      <div class="add_input_edge">
+        <h2>Add Edge</h2>
+        <div class="input_box">
+          <span>Edge ID</span>
+          <input id="add-edge-id" type="text" placeholder="Edge id" />
+        </div>
+        <div class="input_box">
+          <span>Edge value</span>
+          <input id="add-edge-value" type="text" placeholder="Edge value" />
+        </div>
+        <div class="input_box">
+          <span>From node id</span>
+          <input
+            id="add-edge-from"
+            type="text"
+            placeholder="From node with id"
+          />
+        </div>
+        <div class="input_box">
+          <span>To node id</span>
+          <input id="add-edge-to" type="text" placeholder="To node with id" />
+        </div>
+        <button id="add-edge-button" class="action-btn">Add Edge</button>
+      </div>
+      <!-- Edit Edge -->
+      <div class="edit_input_edge">
+        <h2>Edit Edge</h2>
+        <div class="input_box">
+          <span>Edge ID</span>
+          <input id="edit-edge-id" type="text" placeholder="Edge id" />
+        </div>
+        <div class="input_box">
+          <span>Edge value</span>
+          <input id="edit-edge-value" type="text" placeholder="Edge value" />
+        </div>
+        <button id="edit-edge-button" class="action-btn">Edit</button>
+      </div>
+      <!-- Delete Edge-->
+      <div class="delete_input_edge">
+        <h2>Delete Edge</h2>
+        <div class="input_box">
+          <span>Edge ID</span>
+          <input id="delete-edge-id" type="text" placeholder="Edge id" />
+        </div>
+        <button id="delete-edge-button" class="action-btn">Delete</button>
+      </div>
+    </div>
+
+    <p class="err"></p>
+    <p class="succes"></p>
+
+    <!--Network container-->
+    <div id="mynetwork"></div>
+
+    <!--Footer-->
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h1>Reference</h1>
+            <a href="https://visjs.github.io/vis-network/docs/network/"
+              >Vis.js.gitbub.io</a
+            >
+            <a href="https://github.com/visjs/vis-network"
+              >Github vis-network
+            </a>
+            <a href="https://visjs.org/">Visjs.org</a>
+            <a href="https://visjs.github.io/vis-network/examples/"
+              >Vis.js.vis-network Examples</a
+            >
+            <a href="https://jsfiddle.net/api/post/library/pure/">
+              Jsfiddle vis.js Example</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="footer__logo">
+        <a href="#home" class="footer__logo">GraphEditor</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
